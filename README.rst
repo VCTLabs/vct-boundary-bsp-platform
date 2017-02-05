@@ -1,6 +1,6 @@
-==============================
- VCT Beagleboard BSP Manifest
-==============================
+===================================
+ VCT Boundary Devices BSP Manifest
+===================================
 
 The various branches (other than this one) available here will configure the repo build
 for the appropriate branches in each repository and clone them in the typical fashion,
