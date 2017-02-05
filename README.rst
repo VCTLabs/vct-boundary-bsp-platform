@@ -50,15 +50,15 @@ Download the BSP source
 ::
 
   $ PATH=${PATH}:~/bin
-  $ mkdir beagleboard-bsp
-  $ cd beagleboard-bsp
+  $ mkdir boundary-bsp
+  $ cd boundary-bsp
   $ repo init -u https://github.com/VCTLabs/vct-boundary-bsp-platform -b oe-krogoth
   $ repo sync
 
 At the end of the above commands you have all the metadata you need to start
 building with poky and meta-oe on fido branches.
 
-To start a simple image build::
+To start a simple image build for a Boundary Devices iMX6 nitrogen board::
 
   $ cd oe-core
   $ source ./oe-init-build-env build-dir  # you choose name of build-dir
