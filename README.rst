@@ -7,28 +7,16 @@ for the appropriate branches in each repository and clone them in the typical fa
 ie, with either poky or oe-core as the parent directory and the additional metadata
 layers underneath (as documented in the upstream setup).
 
-The 2 main choices are:
+The main branches build either the poky reference distro or oe-core with your choice
+of distro.  Note that oe-core will build "distroless" by default, however, you can set
+DISTRO = "vctlabs" in your local.conf if you want the linux-bb-kernel to be the default.
+See the `meta-small-arm-extra README file`_ for manual config setup for the mainline kernel
+recipes and the Freescale board pages on the `LinuxOnArm wiki`_
 
-* The yocto BSP (and poky reference distribution) with meta-openembedded metadata
-  plus (optional) TI and beagleboard.org BSP's and meta-small-arm-extra
-
-* The openembedded-core metadata with choice of TI and beagleboard.org BSP's, plus
-  meta-openembedded metadata and meta-small-arm-extra for additional recipes
-
-  - The more recent release layers have additional metadata (layers) such as
-    meta-uav and meta-browsers; add to bblayers.conf as needed
-  - There are additional kernel and u-boot recipes in meta-small-arm-extra
-    based on the latest patches and mainline branches from the `LinuxOnArm wiki`_
-
-Note that oe-core will build "distroless" by default, however, you can set
-DISTRO = "vctlabs" in your local.conf if you want the linux-bb-kernel to
-be the default.  See the `meta-small-arm-extra README file`_ for manual config
-setup for the extra kernel recipes.
-
-.. _LinuxOnArm wiki: https://eewiki.net/display/linuxonarm/BeagleBone+Black
+.. _LinuxOnArm wiki: https://eewiki.net/display/linuxonarm
 .. _meta-small-arm-extra README file: https://github.com/sarnold/meta-small-arm-extra
 
-There are 4 main branches for each of the above choices: fido, jethro, krogoth, and master.
+There are 3 main branches for each of the above choices: krogoth, morty, and master.
 Select the main build branch using the github branch button above, which will select the
 correct manifest branches and BSP/metadata using the respective branches in this
 repo as shown below.
@@ -64,7 +52,7 @@ Download the BSP source
   $ PATH=${PATH}:~/bin
   $ mkdir beagleboard-bsp
   $ cd beagleboard-bsp
-  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b poky-fido
+  $ repo init -u https://github.com/VCTLabs/vct-boundary-bsp-platform -b oe-krogoth
   $ repo sync
 
 At the end of the above commands you have all the metadata you need to start
@@ -72,33 +60,35 @@ building with poky and meta-oe on fido branches.
 
 To start a simple image build::
 
-  $ cd poky
+  $ cd oe-core
   $ source ./oe-init-build-env build-dir  # you choose name of build-dir
-  $ ${EDITOR} conf/local.conf             # set MACHINE to beaglebone
+  $ ${EDITOR} conf/local.conf             # set MACHINE to nitrogen6x
   $ bitbake core-image-minimal
 
-You can use any directory (build-dir above) to host your build. The above commands will build an image for beaglebone using the core yocto BSP machine config and the default yocto-linux kernel. You can replace the default BSP config with either meta-ti or the meta-beagleboard BSP. This will provide a more Beagle-centric set of defaults for kernel and bootloader, as well as a bigger selection of kernels and TI support tools.
+You can use any directory (build-dir above) to host your build. The above commands will build an image for nitrogen6x using the boundary BSP machine config and the default fsl-linux kernel.
 
-The main source code is checked out in the bsp dir above, and the build dir will default
-to poky/build-dir unless you choose a different path above.
+For some machines, you can replace the default fsl kernel with a patched mainline kernel; see the armv7multi kernel recipes in meta-small-arm-extra (note new machines will be added as this manifest evolves).
+
+The main source code is checked out in the bsp dir above, and the build output dir will default
+to oe-core/build-dir unless you choose a different path above.
 
 Source code
 -----------
 
 Download the manifest source here::
 
-  $ git clone https://github.com/VCTLabs/vct-beagleboard-bsp-platform
+  $ git clone https://github.com/VCTLabs/vct-boundary-bsp-platform
 
 Using Development and Testing/Release Branches
 ----------------------------------------------
 
 Replace the repo init command above with one of the following:
 
-For developers - krogoth
+For developers - morty
 
 ::
 
-  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b poky-krogoth
+  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b oe-morty
 
 For intrepid developers and testers - master
 
@@ -109,6 +99,6 @@ breaks something that was working before.  Use with caution.
 
 ::
 
-  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b poky-master
+  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b oe-master
 
 
