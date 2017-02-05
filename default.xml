@@ -3,6 +3,7 @@
 
   <default sync-j="4" revision="oe-krogoth"/>
 
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://github.com/openembedded" name="oe-core"/>
   <remote fetch="https://github.com/sarnold" name="meta-sla"/>
   <remote fetch="https://github.com/VCTLabs" name="meta-vct"/>
@@ -15,7 +16,7 @@
   <project remote="oe-core" revision="krogoth" name="meta-openembedded" path="oe-core/meta-openembedded"/>
   <project remote="oe-core" revision="1.30" name="bitbake" path="oe-core/bitbake"/>
 
-  <project remote="freescale" revision="krogoth" name="meta-fsl-arm" path="oe-core/meta-fsl-arm"/>
+  <project remote="yocto" revision="krogoth" name="meta-fsl-arm" path="oe-core/meta-fsl-arm"/>
   <project remote="boundary" revision="krogoth" name="meta-boundary" path="oe-core/meta-boundary"/>
 
   <project remote="meta-vct" revision="krogoth" name="meta-printing" path="oe-core/meta-printing"/>
@@ -23,6 +24,7 @@
 
   <project remote="meta-qt5" revision="krogoth" name="meta-qt5" path="oe-core/meta-qt5"/>
   <project remote="ossystems" revision="c8774d14caef4b26dee292562fec9540c359c61b" name="meta-browser" path="oe-core/meta-browser"/>
+  <project remote="freescale" revision="master" name="Documentation" path="oe-core/Documentation"/>
 
 </manifest>
 
