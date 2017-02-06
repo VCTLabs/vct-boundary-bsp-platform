@@ -16,7 +16,7 @@
   <project remote="oe-core" revision="krogoth" name="meta-openembedded" path="oe-core/meta-openembedded"/>
   <project remote="oe-core" revision="1.30" name="bitbake" path="oe-core/bitbake"/>
 
-  <project remote="yocto" revision="krogoth" name="meta-freescale" path="oe-core/meta-freescale"/>
+  <project remote="yocto" revision="master" name="meta-freescale" path="oe-core/meta-freescale"/>
   <project remote="yocto" revision="krogoth" name="meta-fsl-arm" path="oe-core/meta-fsl-arm"/>
   <project remote="freescale" revision="krogoth" name="meta-freescale-3rdparty" path="oe-core/meta-freescale-3rdparty"/>
   <project remote="boundary" revision="krogoth" name="meta-boundary" path="oe-core/meta-boundary"/>
