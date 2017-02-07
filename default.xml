@@ -13,7 +13,7 @@
 
   <project remote="oe-core" revision="morty" name="openembedded-core" path="oe-core"/>
   <project remote="oe-core" revision="morty" name="meta-openembedded" path="oe-core/meta-openembedded"/>
-  <project remote="oe-core" revision="1.30" name="bitbake" path="oe-core/bitbake"/>
+  <project remote="oe-core" revision="1.32" name="bitbake" path="oe-core/bitbake"/>
 
   <project remote="yocto" revision="morty" name="meta-freescale" path="oe-core/meta-freescale"/>
   <project remote="freescale" revision="morty" name="meta-freescale-3rdparty" path="oe-core/meta-freescale-3rdparty"/>
