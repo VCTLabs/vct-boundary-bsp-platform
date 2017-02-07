@@ -20,7 +20,7 @@ Download the BSP source
   $ PATH=${PATH}:~/bin
   $ mkdir boundary-bsp
   $ cd boundary-bsp
-  $ repo init -u https://github.com/VCTLabs/vct-boundary-bsp-platform -b oe-krogoth
+  $ repo init -u https://github.com/VCTLabs/vct-boundary-bsp-platform -b oe-morty
   $ repo sync
 
 At the end of the commands you have every metadata you need to start work with.

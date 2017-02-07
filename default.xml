@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <default sync-j="4" revision="oe-krogoth"/>
+  <default sync-j="4" revision="oe-morty"/>
 
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://github.com/openembedded" name="oe-core"/>
@@ -10,23 +10,20 @@
   <remote fetch="https://github.com/Freescale" name="freescale"/>
   <remote fetch="https://github.com/boundarydevices" name="boundary"/>
   <remote fetch="https://github.com/meta-qt5" name="meta-qt5"/>
-  <remote fetch="https://github.com/OSSystems" name="ossystems"/>
 
-  <project remote="oe-core" revision="krogoth" name="openembedded-core" path="oe-core"/>
-  <project remote="oe-core" revision="krogoth" name="meta-openembedded" path="oe-core/meta-openembedded"/>
+  <project remote="oe-core" revision="morty" name="openembedded-core" path="oe-core"/>
+  <project remote="oe-core" revision="morty" name="meta-openembedded" path="oe-core/meta-openembedded"/>
   <project remote="oe-core" revision="1.30" name="bitbake" path="oe-core/bitbake"/>
 
-  <project remote="yocto" revision="master" name="meta-freescale" path="oe-core/meta-freescale"/>
-  <project remote="yocto" revision="krogoth" name="meta-fsl-arm" path="oe-core/meta-fsl-arm"/>
-  <project remote="freescale" revision="krogoth" name="meta-freescale-3rdparty" path="oe-core/meta-freescale-3rdparty"/>
-  <project remote="boundary" revision="krogoth" name="meta-boundary" path="oe-core/meta-boundary"/>
+  <project remote="yocto" revision="morty" name="meta-freescale" path="oe-core/meta-freescale"/>
+  <project remote="freescale" revision="morty" name="meta-freescale-3rdparty" path="oe-core/meta-freescale-3rdparty"/>
+  <project remote="boundary" revision="morty" name="meta-boundary" path="oe-core/meta-boundary"/>
 
-  <project remote="meta-vct" revision="krogoth" name="meta-printing" path="oe-core/meta-printing"/>
+  <project remote="meta-vct" revision="morty" name="meta-printing" path="oe-core/meta-printing"/>
   <project remote="meta-sla" revision="master" name="meta-small-arm-extra" path="oe-core/meta-small-arm-extra"/>
 
-  <project remote="meta-qt5" revision="krogoth" name="meta-qt5" path="oe-core/meta-qt5"/>
-  <project remote="ossystems" revision="c8774d14caef4b26dee292562fec9540c359c61b" name="meta-browser" path="oe-core/meta-browser"/>
-  <project remote="freescale" revision="master" name="Documentation" path="oe-core/Documentation"/>
+  <project remote="meta-qt5" revision="morty" name="meta-qt5" path="oe-core/meta-qt5"/>
+  <project remote="freescale" revision="morty" name="Documentation" path="oe-core/Documentation"/>
 
 </manifest>
 
