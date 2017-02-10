@@ -22,7 +22,7 @@
   <project remote="boundary" revision="krogoth" name="meta-boundary" path="oe-core/meta-boundary"/>
 
   <project remote="meta-vct" revision="krogoth" name="meta-printing" path="oe-core/meta-printing"/>
-  <project remote="meta-sla" revision="master" name="meta-small-arm-extra" path="oe-core/meta-small-arm-extra"/>
+  <project remote="meta-sla" revision="krogoth" name="meta-small-arm-extra" path="oe-core/meta-small-arm-extra"/>
 
   <project remote="meta-qt5" revision="krogoth" name="meta-qt5" path="oe-core/meta-qt5"/>
   <project remote="ossystems" revision="c8774d14caef4b26dee292562fec9540c359c61b" name="meta-browser" path="oe-core/meta-browser"/>
