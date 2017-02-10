@@ -3,29 +3,27 @@
 
   <default sync-j="4" revision="oe-master"/>
 
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://github.com/openembedded" name="oe-core"/>
-  <remote fetch="https://github.com/rcn-ee" name="rcn"/>
-  <remote fetch="https://github.com/koenkooi" name="meta-bb"/>
-  <remote fetch="https://github.com/sarnold" name="vct"/>
-  <remote fetch="https://github.com/bmwcarit" name="meta-ros"/>
-  <remote fetch="https://github.com/koenkooi" name="meta-uav"/>
+  <remote fetch="https://github.com/sarnold" name="meta-sla"/>
+  <remote fetch="https://github.com/VCTLabs" name="meta-vct"/>
+  <remote fetch="https://github.com/Freescale" name="freescale"/>
+  <remote fetch="https://github.com/boundarydevices" name="boundary"/>
   <remote fetch="https://github.com/meta-qt5" name="meta-qt5"/>
-  <remote fetch="https://github.com/OSSystems" name="ossystems"/>
 
   <project remote="oe-core" revision="master" name="openembedded-core" path="oe-core"/>
   <project remote="oe-core" revision="master" name="meta-openembedded" path="oe-core/meta-openembedded"/>
-  <project remote="oe-core" revision="1.30" name="bitbake" path="oe-core/bitbake"/>
+  <project remote="oe-core" revision="1.32" name="bitbake" path="oe-core/bitbake"/>
 
-  <project remote="rcn" revision="master" name="meta-ti" path="oe-core/meta-ti"/>
+  <project remote="yocto" revision="master" name="meta-freescale" path="oe-core/meta-freescale"/>
+  <project remote="freescale" revision="master" name="meta-freescale-3rdparty" path="oe-core/meta-freescale-3rdparty"/>
+  <project remote="boundary" revision="master" name="meta-boundary" path="oe-core/meta-boundary"/>
 
-  <project remote="meta-bb" revision="master" name="meta-beagleboard" path="oe-core/meta-beagleboard"/>
+  <project remote="meta-vct" revision="master" name="meta-printing" path="oe-core/meta-printing"/>
+  <project remote="meta-sla" revision="master" name="meta-small-arm-extra" path="oe-core/meta-small-arm-extra"/>
 
-  <project remote="vct" revision="master" name="meta-small-arm-extra" path="oe-core/meta-small-arm-extra"/>
-
-  <project remote="meta-ros" revision="master" name="meta-ros" path="oe-core/meta-ros"/>
-  <project remote="meta-uav" revision="master" name="meta-uav" path="oe-core/meta-uav"/>
   <project remote="meta-qt5" revision="master" name="meta-qt5" path="oe-core/meta-qt5"/>
-  <project remote="ossystems" revision="master" name="meta-browser" path="oe-core/meta-browser"/>
+  <project remote="freescale" revision="master" name="Documentation" path="oe-core/Documentation"/>
 
 </manifest>
 
