@@ -20,14 +20,14 @@ Download the BSP source
   $ PATH=${PATH}:~/bin
   $ mkdir boundary-bsp
   $ cd boundary-bsp
-  $ repo init -u https://github.com/VCTLabs/vct-boundary-bsp-platform -b oe-morty
+  $ repo init -u https://github.com/VCTLabs/vct-boundary-bsp-platform -b poky-morty
   $ repo sync
 
 At the end of the commands you have every metadata you need to start work with.
 
 To start a simple image build for a Boundary Devices nitrogen board::
 
-  $ cd oe-core
+  $ cd poky
   $ source ./oe-init-build-env build-dir  # you choose name of build-dir
   $ ${EDITOR} conf/local.conf             # set MACHINE to nitrogen6x
   $ bitbake core-image-minimal
@@ -41,7 +41,7 @@ kernel; see the armv7multi kernel recipes in meta-small-arm-extra (note new mach
 will be added as this manifest evolves).
 
 The main source code is checked out in the bsp dir above, and the build output dir
-will default to oe-core/build-dir unless you choose a different path above.
+will default to poky/build-dir unless you choose a different path above.
 
 See the default.xml file for repo and branch details; note that krogoth branches
 use meta-fsl-arm instead of meta-freescale.
@@ -62,7 +62,7 @@ For developers - morty
 
 ::
 
-  $ repo init -u https://github.com/VCTLabs/vct-boundary-bsp-platform -b oe-morty
+  $ repo init -u https://github.com/VCTLabs/vct-boundary-bsp-platform -b poky-morty
 
 For intrepid developers and testers - master
 
@@ -73,5 +73,5 @@ breaks something that was working before.  Use with caution.
 
 ::
 
-  $ repo init -u https://github.com/VCTLabs/vct-boundary-bsp-platform -b oe-master
+  $ repo init -u https://github.com/VCTLabs/vct-boundary-bsp-platform -b poky-master
 
