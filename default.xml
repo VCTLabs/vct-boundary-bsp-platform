@@ -20,7 +20,7 @@
   <project remote="boundary" revision="morty" name="meta-boundary" path="oe-core/meta-boundary"/>
 
   <project remote="meta-vct" revision="morty" name="meta-printing" path="oe-core/meta-printing"/>
-  <project remote="meta-sla" revision="master" name="meta-small-arm-extra" path="oe-core/meta-small-arm-extra"/>
+  <project remote="meta-sla" revision="morty" name="meta-small-arm-extra" path="oe-core/meta-small-arm-extra"/>
 
   <project remote="meta-qt5" revision="morty" name="meta-qt5" path="oe-core/meta-qt5"/>
   <project remote="freescale" revision="morty" name="Documentation" path="oe-core/Documentation"/>
