@@ -9,6 +9,7 @@
   <remote fetch="https://github.com/VCTLabs" name="meta-vct"/>
   <remote fetch="https://github.com/Freescale" name="freescale"/>
   <remote fetch="https://github.com/boundarydevices" name="boundary"/>
+  <remote fetch="https://github.com/OSSystems" name="oss"/>
   <remote fetch="https://github.com/meta-qt5" name="meta-qt5"/>
 
   <project remote="yocto" revision="master" name="poky" path="poky"/>
@@ -16,11 +17,13 @@
 
   <project remote="yocto" revision="master" name="meta-freescale" path="poky/meta-freescale"/>
   <project remote="freescale" revision="master" name="meta-freescale-3rdparty" path="poky/meta-freescale-3rdparty"/>
+  <project remote="freescale" revision="master" name="meta-freescale-distro" path="poky/meta-freescale-distro"/>
   <project remote="boundary" revision="master" name="meta-boundary" path="poky/meta-boundary"/>
 
   <project remote="meta-vct" revision="master" name="meta-printing" path="poky/meta-printing"/>
   <project remote="meta-sla" revision="master" name="meta-small-arm-extra" path="poky/meta-small-arm-extra"/>
 
+  <project remote="oss" revision="master" name="meta-browser" path="poky/meta-browser"/>
   <project remote="meta-vct" revision="master" name="meta-qt5" path="poky/meta-qt5"/>
 
 </manifest>
