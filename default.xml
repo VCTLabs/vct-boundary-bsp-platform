@@ -9,6 +9,7 @@
   <remote fetch="https://github.com/VCTLabs" name="meta-vct"/>
   <remote fetch="https://github.com/Freescale" name="freescale"/>
   <remote fetch="https://github.com/boundarydevices" name="boundary"/>
+  <remote fetch="https://github.com/OSSystems" name="oss"/>
   <remote fetch="https://github.com/meta-qt5" name="meta-qt5"/>
 
   <project remote="yocto" revision="morty" name="poky" path="poky"/>
@@ -20,8 +21,9 @@
   <project remote="boundary" revision="morty" name="meta-boundary" path="poky/meta-boundary"/>
 
   <project remote="meta-vct" revision="morty" name="meta-printing" path="poky/meta-printing"/>
-  <project remote="meta-sla" revision="master" name="meta-small-arm-extra" path="poky/meta-small-arm-extra"/>
+  <project remote="meta-sla" revision="morty" name="meta-small-arm-extra" path="poky/meta-small-arm-extra"/>
 
+  <project remote="oss" revision="morty" name="meta-browser" path="poky/meta-browser"/>
   <project remote="meta-qt5" revision="morty" name="meta-qt5" path="poky/meta-qt5"/>
   <project remote="freescale" revision="morty" name="Documentation" path="poky/Documentation"/>
 
