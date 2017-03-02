@@ -25,7 +25,6 @@
 
   <project remote="oss" revision="morty" name="meta-browser" path="poky/meta-browser"/>
   <project remote="meta-qt5" revision="morty" name="meta-qt5" path="poky/meta-qt5"/>
-  <project remote="freescale" revision="morty" name="Documentation" path="poky/Documentation"/>
 
 </manifest>
 
