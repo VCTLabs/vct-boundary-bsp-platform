@@ -13,7 +13,11 @@
 
   <project remote="oe-core" revision="master" name="openembedded-core" path="oe-core"/>
   <project remote="oe-core" revision="master" name="meta-openembedded" path="oe-core/meta-openembedded"/>
-  <project remote="oe-core" revision="1.32" name="bitbake" path="oe-core/bitbake"/>
+
+  <!--
+     The bitbake commit hash is version 1.33.2 (no tag or branch)
+  -->
+  <project remote="oe-core" revision="f5ab65610d6d6c0587948b644292f57c07dece0c" name="bitbake" path="oe-core/bitbake"/>
 
   <project remote="yocto" revision="master" name="meta-freescale" path="oe-core/meta-freescale"/>
   <project remote="freescale" revision="master" name="meta-freescale-3rdparty" path="oe-core/meta-freescale-3rdparty"/>
